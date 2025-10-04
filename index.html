@@ -62,17 +62,20 @@
         .location-label {
             font-size: 18px;
             font-weight: bold;
-            color: black; /* Changed to black */
+            color: black;
             flex: 1;
             min-width: 250px;
             margin-bottom: 10px;
-            text-align: left;
+            text-align: center; /* Center horizontally */
+            display: flex;
+            justify-content: center; /* Center horizontally inside flex */
+            align-items: center;     /* Center vertically */
         }
 
         .location-button {
             padding: 10px 15px;
             font-size: 14px;
-            text-align: center; /* Ensure center alignment */
+            text-align: center;
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -102,17 +105,16 @@
         @media (max-width: 480px) {
             .location-container {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
             }
 
             .location-label, .location-button {
                 width: 100%;
-                text-align: left;
+                text-align: center;
             }
 
             .location-button {
                 margin-top: 5px;
-                text-align: center; /* Reaffirm center alignment for small screens */
             }
         }
     </style>
@@ -125,7 +127,7 @@
         <h2>Avishkar Zonal Level Competition - 2026</h2>
     </header>
 
-    <p>Click to view a location on Google Maps:</p>
+    <p>Click on a location to view it on Google Maps:</p>
 
     <!-- Location Entries -->
     <div class="location-container">
